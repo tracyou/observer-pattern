@@ -5,9 +5,8 @@ import sensors.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ObservableWeatherStation implements Subject{ //TODO implement interfaces as necessary
+public class ObservableWeatherStation implements Subject{
 
-    //TODO add a structure to hold the sensors, observers and the current weather
     private List<Sensor> sensors;
     private List<WeatherDisplay> observers;
 
@@ -23,7 +22,6 @@ public class ObservableWeatherStation implements Subject{ //TODO implement inter
     }
 
     public String checkSensors(){
-        //TODO get readings from sensors and format in a suitable way (see output of main)
         StringBuilder sb = new StringBuilder();
         for (Sensor s: sensors) {
             s.takeMeasurement();
@@ -51,7 +49,7 @@ public class ObservableWeatherStation implements Subject{ //TODO implement inter
         }
     }
 
-
-    //TODO add methods as necessary
-
+    public Integer getNumberOfObservers() {
+        return observers.size();
+    }
 }

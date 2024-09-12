@@ -1,6 +1,6 @@
 package observablestation;
 
-public class WeatherDisplay implements Observer { //TODO implement interfaces as necessary
+public class WeatherDisplay implements Observer {
     private String name;
 
     private ObservableWeatherStation observableWeatherStation;
@@ -15,7 +15,6 @@ public class WeatherDisplay implements Observer { //TODO implement interfaces as
         this.display();
     }
 
-//    TODO implement methods as necessary
     public void display(){
         System.out.println(name + " Current conditions: " + observableWeatherStation.checkSensors());
     }
